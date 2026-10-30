@@ -1,0 +1,9 @@
+project: savantenvs/mozjpeg
+target: compress_yuv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/compress_yuv/testsuite
+cmds:
+  - cmd: /mayhem/compress_yuv_fuzzer
+    libfuzzer: true
+    timeout: 5

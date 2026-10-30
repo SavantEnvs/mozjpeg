@@ -1,0 +1,9 @@
+project: savantenvs/mozjpeg
+target: compress16_lossless
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/compress16_lossless/testsuite
+cmds:
+  - cmd: /mayhem/compress16_lossless_fuzzer
+    libfuzzer: true
+    timeout: 5

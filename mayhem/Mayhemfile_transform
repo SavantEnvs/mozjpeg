@@ -1,0 +1,9 @@
+project: savantenvs/mozjpeg
+target: transform
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/transform/testsuite
+cmds:
+  - cmd: /mayhem/transform_fuzzer
+    libfuzzer: true
+    timeout: 5
